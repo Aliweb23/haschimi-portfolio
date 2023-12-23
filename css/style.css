@@ -300,6 +300,7 @@ section{
     width: 26rem;
     border-radius: 1rem;
     margin: 2rem;
+    cursor: pointer;
     /* overflow: hidden; */
 }
 
