@@ -24,4 +24,10 @@ $(document).ready(function() {
             scrollTop: $($(this).attr('href')).offset().top,
         }, 500, 'linear');
     });
+
+    // Download-link
+    function openNewWindow() {
+        window.open("https://aliweb23.github.io/haschimi-portfolio/");
+      }
+
 });

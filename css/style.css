@@ -121,6 +121,29 @@ section{
     padding: 1rem;
 }
 
+section .text-1 {
+    display: flex;
+    width: 100%;
+    min-height: 100px; /* Statt height: auto; für eine Mindesthöhe */
+    border: 2px solid var(--lightgreen); /* Etwas dickerer Rand */
+    margin: 20px 0; /* Etwas Abstand oben und unten */
+    padding: 10px; /* Innenabstand für den Textinhalt */
+    justify-content: space-around; /* Gleichmäßiger Raum zwischen den Elementen */
+    align-items: center;
+     /* font-size: 1.8rem; Kleinere Schriftgröße für bessere Lesbarkeit */
+    font-weight: bold; /* Fettschrift für Betonung */
+    background-color: var(--lightgrey); /* Hintergrundfarbe hinzugefügt */
+    border-radius: 10px; /* Abgerundete Ecken für eine elegantere Optik */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Leichte Schatten für Trennung vom Hintergrund */
+}
+
+/* Hinzugefügter Hover-Effekt für Interaktivität */
+section .text-1:hover {
+    transform: scale(1.05); /* Vergrößerungseffekt bei Hover */
+    transition: transform 0.3s ease-in-out; /* Sanfter Übergang */
+}
+
+
 .btn{
     padding: .7rem 3rem;
     background: #333;
@@ -172,7 +195,7 @@ section{
     color:white
 }
 .home p{
-    font-size: 2.2rem;
+    font-size: 1.8rem;
     color:#eee;
     padding: 1rem 0;
 }
@@ -218,11 +241,19 @@ section{
 
 .about .row .counter .box{
     width: 20rem;
-    background: #222;
+    background: #2b2a2ada;
     text-align: center;
     padding: 2rem;
     margin: 2rem;
+    border: 2px solid #fff;
+    border-radius: 10%;
 }
+
+.about .row .counter .box:hover{
+    transform: scale(1.05); /* Vergrößerungseffekt bei Hover */
+    transition: transform 0.3s ease-in-out; /* Sanfter Übergang */
+}
+
 
 .about .row .counter .box span{
     font-size: 4rem;
