@@ -435,13 +435,12 @@ section .text-1:hover {
 .contact-links div {
     display: inline-block;
     margin: 0 10px;
-    color: #eee;;
+    color: #eee;
     text-decoration: none;
     font-size: larger;
     font-weight: 100;
     list-style: none;
 }
-
 
 .icon {
     width: 80px;
