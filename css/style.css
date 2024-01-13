@@ -1,12 +1,9 @@
-/* Kommentar für Google Fonts hinzugefügt */
-@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,300;0,400;0,500;1,200;1,300;1,400&display=swap');
-
 :root {
     --lightgreen: #96be25;
 }
 
 * {
-    font-family: 'Nunito Sans', sans-serif;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -41,6 +38,7 @@ html::-webkit-scrollbar-thumb {
 }
 
 body {
+    font-family: inherit;
     background: #111;
     overflow-x: hidden;
     padding-left: 35rem; 
@@ -124,22 +122,23 @@ section{
 section .text-1 {
     display: flex;
     width: 100%;
-    min-height: 100px; /* Statt height: auto; für eine Mindesthöhe */
-    border: 2px solid var(--lightgreen); /* Etwas dickerer Rand */
-    margin: 20px 0; /* Etwas Abstand oben und unten */
-    padding: 10px; /* Innenabstand für den Textinhalt */
-    justify-content: space-around; /* Gleichmäßiger Raum zwischen den Elementen */
+    min-height: 100px; 
+    border: 2px solid var(--lightgreen); 
+    margin: 20px 0; 
+    padding: 10px; 
+    text-transform: none;
+    justify-content: space-around; 
     align-items: center;
-     /* font-size: 1.8rem; Kleinere Schriftgröße für bessere Lesbarkeit */
-    font-weight: bold; /* Fettschrift für Betonung */
-    background-color: var(--lightgrey); /* Hintergrundfarbe hinzugefügt */
-    border-radius: 10px; /* Abgerundete Ecken für eine elegantere Optik */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Leichte Schatten für Trennung vom Hintergrund */
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1.5rem; 
+    background-color: var(--lightgrey); 
+    border-radius: 10px; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
 }
 
 /* Hinzugefügter Hover-Effekt für Interaktivität */
 section .text-1:hover {
-    transform: scale(1.05); /* Vergrößerungseffekt bei Hover */
+    transform: scale(1.05); 
     transition: transform 0.3s ease-in-out; /* Sanfter Übergang */
 }
 
