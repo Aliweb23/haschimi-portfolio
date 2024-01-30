@@ -1,17 +1,22 @@
 :root {
     --lightgreen: #96be25;
+    --vedana: Verdana, Geneva, Tahoma, sans-serif;
+    --html-bg-color: #222;
+    --body-bg-color: #111;
+    --text-color: #eee;
+    --text-color1:#222;
 }
 
 * {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family:var(--verdana);
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     text-decoration: none;
     outline: none;
     border: none;
-    text-transform: capitalize;
-    transition: all 0.2s linear; /* 'all' statt 'text-transform' korrigiert */
+    /* text-transform: capitalize; */
+    transition: all 0.2s linear; 
 }
 
 *::selection {
@@ -21,8 +26,8 @@
 
 html {
     font-size: 62.5%;
-    /* font-size: 100%; */
     overflow-x: hidden;
+    font-family: var(--verdana);
 }
 
 html::-webkit-scrollbar {
@@ -30,7 +35,7 @@ html::-webkit-scrollbar {
 }
 
 html::-webkit-scrollbar-track {
-    background: #222;
+    background:var(--html-bg-color);
 }
 
 html::-webkit-scrollbar-thumb {
@@ -38,8 +43,9 @@ html::-webkit-scrollbar-thumb {
 }
 
 body {
-    font-family: inherit;
-    background: #111;
+    font-family:var(--vedana);
+    background: var(--body-bg-color);
+    color: var(--text-color);
     overflow-x: hidden;
     padding-left: 35rem; 
 }
@@ -51,7 +57,8 @@ header {
     z-index: 1000;
     height: 100%;
     width: 35rem;
-    background: #1a1a1a;
+    font-family: var(--verdana);
+    background: var(--html-bg-color);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -70,12 +77,12 @@ header .user img {
 
 header .user .name {
     font-size: 3.5rem;
-    color: #eee;
+    color: var(--text-color);
 }
 
 header .user .post {
     font-size: 3.5rem;
-    color: #fff;
+    color: var(--text-color);
 }
 
 header .navbar {
@@ -91,22 +98,22 @@ header .navbar ul li a {
     display: block;
     padding: 1rem;
     margin: 1.5rem 0;
-    background: #333;
-    color: #fff;
+    background: var(--html-bg-color);
+    color: var(--text-color);
     font-size: 2rem;
     border-radius: 5rem;
 }
 
 header .navbar ul li a:hover {
-    background: var(--lightgreen); /* Hinzugefügt: Farbänderung bei Hover */
+    background: var(--lightgreen); 
 }
 
 #menu {
     position: fixed;
     top: 2rem;
     right: 2rem;
-    background: #333;
-    color: #fff;
+    background: var(--html-bg-color);
+    color: var(--text-color);
     cursor: pointer;
     font-size: 2.5rem;
     padding: 1rem 1.5rem;
@@ -116,10 +123,13 @@ header .navbar ul li a:hover {
 
 section{
     min-height: 100vh;
+    font-family: var(--verdana);
     padding: 1rem;
 }
 
 section .text-1 {
+    font-family: var(--verdana);
+    color: var(--text-color1);
     display: flex;
     width: 100%;
     min-height: 100px; 
@@ -129,9 +139,10 @@ section .text-1 {
     text-transform: none;
     justify-content: space-around; 
     align-items: center;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 1.5rem; 
-    background-color: var(--lightgrey); 
+    text-align: justify;
+    font-size: 1rem; 
+    font-weight: bold;
+    background-color: var(--html-bg-color); 
     border-radius: 10px; 
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
 }
@@ -139,18 +150,18 @@ section .text-1 {
 /* Hinzugefügter Hover-Effekt für Interaktivität */
 section .text-1:hover {
     transform: scale(1.05); 
-    transition: transform 0.3s ease-in-out; /* Sanfter Übergang */
+    transition: transform 0.5s ease-in-out; /* Sanfter Übergang */
 }
 
 
 .btn{
     padding: .7rem 3rem;
-    background: #333;
-    color: #fff;
+    background: var(--html-bg-color);
+    color: var(--text-color);
     cursor: pointer;
     margin-top: 1rem;
     font-size: 2rem;
-    border-radius: 5rem ;
+    border-radius: 5rem;
 }
 
 .btn i{
@@ -167,8 +178,8 @@ section .text-1:hover {
     margin: 0 6rem;
     font-size: 4rem;
     padding: 1rem;
-    border-bottom: 1rem solid #fff;
-    color: #fff;
+    border-bottom: 1rem solid var(--text-color);
+    color: var(--text-color);
 }
 
 .heading span{
@@ -186,17 +197,18 @@ section .text-1:hover {
 
 .home h3{
     font-size: 2.5rem;
-    color: #fff;
+    color: var(--text-color);
 }
 
 .home h1{
     font-size: 5rem;
-    color:white
+    color: var(--text-color);
 }
 .home p{
-    font-size: 1.8rem;
-    color:#eee;
-    padding: 1rem 0;
+    font-size: 1.4rem;
+    color:var(--text-color);
+    padding: 1rem .9rem;
+    font-weight: 600;
 }
 
 .home h1 span{
@@ -225,7 +237,7 @@ section .text-1:hover {
 }
 
 .about .row .info h3 span{
-    color:#eee;
+    color:var(--text-color);
     padding: 0 1rem;
 
 }
@@ -240,17 +252,19 @@ section .text-1:hover {
 
 .about .row .counter .box{
     width: 20rem;
-    background: #2b2a2ada;
+
+    background: var(--html-bg-color);
     text-align: center;
     padding: 2rem;
     margin: 2rem;
-    border: 2px solid #fff;
+    border: 2px solid var(--text-color);
     border-radius: 10%;
 }
 
 .about .row .counter .box:hover{
     transform: scale(1.05); /* Vergrößerungseffekt bei Hover */
     transition: transform 0.3s ease-in-out; /* Sanfter Übergang */
+    border-color: var(--lightgreen);
 }
 
 
@@ -261,14 +275,14 @@ section .text-1:hover {
 
 .about .row .counter .box h3{
     font-size: 2rem;
-    color: #fff;
+    color: var(--text-color);
 }
 
 .bildung .box-container{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    /* color: #fff; */
+    /* color: var(--text-color); */
     flex-wrap: wrap;
     padding: 1rem 0;
     padding-left: 3rem;
@@ -278,27 +292,30 @@ section .text-1:hover {
     width: 27rem;
     margin: 4rem 1rem;
     padding-left: 4rem;
-    border-left: .2rem solid #fff;
+    border-left: .2rem solid var(--text-color);
     position: relative;
 }
 
 .bildung .box-container .box span{
     font-size: 1.3rem;
-    background: #222;
-    color: #fff;
+    font-family:var(--verdana);
+    background: var(--html-bg-color);
+    color: var(--text-color);
     border-radius: 5rem;
     padding: .5rem 2.5rem;
 }
 
 .bildung .box-container .box h3{
     font-size: 2rem;
-    color: #fff;
+    font-family:var(--verdana);
+    color: var(--text-color);
     padding-top: 1.5rem;
 }
 
 .bildung .box-container .box p{
+    font-family:var(--verdana);
     font-size: 1.4rem;
-    color: #eee;
+    color:var(--text-color);
     padding-top: 1rem 0;
 }
 
@@ -310,8 +327,8 @@ section .text-1:hover {
   border-radius: 50%;
   line-height: 5rem;
   text-align: center;
-  font-size: 2rem;
-  color: #fff;
+  font-size: 3rem;
+  color: var(--text-color);
   background: var(--lightgreen);
 
 }
@@ -388,7 +405,7 @@ section .text-1:hover {
     padding: 1.5rem;
     margin: 1rem 0; 
     background: #333;
-    color: #fff;
+    color:var(--text-color);
     text-transform: none;
     font-size: 1.7rem;
     width: 100%;
@@ -405,7 +422,7 @@ section .text-1:hover {
 
 .kontakt .row .content .title{
     text-transform: uppercase;
-    color: #fff;
+    color:var(--text-color);
     font-size: 3rem;
     padding-bottom: 2rem;
 
@@ -415,7 +432,7 @@ section .text-1:hover {
     display: flex;
     align-items: center;
     font-size: 2rem;
-    color: #eee;
+    color: var(--text-color);
     padding: 1rem 0;
     font-weight: normal;
 }
@@ -434,7 +451,7 @@ section .text-1:hover {
 .contact-links div {
     display: inline-block;
     margin: 0 10px;
-    color: #eee;
+    color: var(--text-color);
     text-decoration: none;
     font-size: larger;
     font-weight: 100;
@@ -449,14 +466,14 @@ section .text-1:hover {
 
 .follow {
     text-align: center;
-    color: #eee;
+    color:var(--text-color);
 }
 
 
 footer {
     background-color:var(--lightgreen);
     font-size: 1.3rem;
-    color: #fff;
+    color: var(--text-color);
     text-align: center;
     padding: 20px;
 }
