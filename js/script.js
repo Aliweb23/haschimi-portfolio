@@ -1,7 +1,7 @@
 $(document).ready(function() {
     // Menü-Click-Ereignis
     $('#menu').click(function() {
-        $(this).toggleClass('fa-times'); // Toggle-Klasse für das Menü-Symbol
+        $(this).toggleClass('fa-times'); // Toggle-Klasse für das Menü-Symbol und Hinzufügen der Klasse "white"
         $('header').toggleClass('toggle'); // Toggle-Klasse für den Header
     });
 
@@ -28,6 +28,5 @@ $(document).ready(function() {
     // Download-link
     function openNewWindow() {
         window.open("https://aliweb23.github.io/haschimi-portfolio/");
-      }
-
+    }
 });
