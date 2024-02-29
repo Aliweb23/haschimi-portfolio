@@ -281,10 +281,11 @@ section .text-1:hover {
 .qrcode img{
     width: 200px;
     height: 200px;
-    margin: 10px;
-    border: 6px solid #95be25da;
-    margin: 20px;
+    border: 4px solid #95be25da;
+    margin: 5px;
+    margin-top: 8px;
     filter: blur(3px);
+    /* border-radius: 3px; */
 }
 .qrcode img:hover{
     filter: none;
@@ -452,6 +453,10 @@ section .text-1:hover {
 .kontakt .row .content .info h3 i{
     padding-right: 1rem;
     color: var(--lightgreen);
+    filter: blur(2px);
+}
+.kontakt .row .content .info h3 i:hover{
+    filter: none;
 }
 .contact-links {
     display: flex;
